@@ -13,6 +13,14 @@ const rootValue = {
     description: "Product One",
     price: 8.99,
     soldout: false,
+    stores: [
+      {
+        store: "Store 1",
+      },
+      {
+        store: "Store 2",
+      },
+    ],
   }),
 };
 app.use(
