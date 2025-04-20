@@ -1,6 +1,7 @@
 import express from "express";
 import { graphqlHTTP } from "express-graphql";
 import schema from "./data/schema.js";
+import { randomBytes } from "crypto";
 
 const PORT = 8080;
 
@@ -22,6 +23,12 @@ const rootValue = {
       },
     ],
   }),
+  creatProduct: ({ input }) => {
+    const id = randomBytes(10).toString("hex");
+    productDatabase[id] = input;
+
+    return new Product(id, input);
+  },
 };
 app.use(
   "/graphql",

@@ -109,3 +109,7 @@ query{
 }
 ```
 
+### Queris & Mutations
+
+- Query: get data
+- Mutation: change data
