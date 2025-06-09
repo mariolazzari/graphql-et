@@ -2,6 +2,8 @@
 
 ## Intro
 
+GraphQL [docs](https://graphql.org/)
+
 ### Setup
 
 ```sh
@@ -113,3 +115,7 @@ query{
 
 - Query: get data
 - Mutation: change data
+
+### Scalar types
+
+Basic types
