@@ -84,6 +84,7 @@ const schema = buildSchema(`
         description: String
         price: Float
         soldout: Boolean
+        inventory: Int
         stores: [Store]!
     }
 
@@ -118,4 +119,9 @@ query{
 
 ### Scalar types
 
-Basic types
+- Float
+- Int
+- Boolean
+
+### Enumerations
+
