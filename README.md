@@ -125,3 +125,27 @@ query{
 
 ### Enumerations
 
+```js
+  type Product {
+        id: ID
+        name: String
+        description: String
+        price: Float
+        soldout: Soldout
+        inventory: Int
+        stores: [Store]!
+    }
+
+    enum Soldout {
+        SOLDOUT
+        ONSALE
+    }
+```
+
+## Setting up persistence
+
+### MongoDB for GraphQL
+
+```sh
+pnpm add mongoose
+```
