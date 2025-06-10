@@ -149,3 +149,9 @@ query{
 ```sh
 pnpm add mongoose
 ```
+
+### SQL dabatase
+
+```sh
+
+```
