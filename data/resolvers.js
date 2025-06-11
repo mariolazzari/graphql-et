@@ -1,18 +1,19 @@
-import { Widget } from "./dbConnections";
+import { Widgets } from "./dbConnectors";
 
-export const resolvers = {
+const resolvers = {
   getProduct: async ({ id }) => {
     try {
-      const prod = await Widget.findById(id);
-      return prod;
+      const product = await Widgets.findById(id);
+      return product;
     } catch (error) {
-      throw error;
+      throw new Error(error);
     }
   },
-
-  creatProduct: ({ input }) => {
-    // const id = randomBytes(10).toString("hex");
+  createProduct: ({ input }) => {
+    // let id = require('crypto').randomBytes(10).toString('hex');
     // productDatabase[id] = input;
     // return new Product(id, input);
   },
 };
+
+export default resolvers;

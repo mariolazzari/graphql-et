@@ -1,13 +1,16 @@
 import express from "express";
 import { graphqlHTTP } from "express-graphql";
-import schema from "./data/schema.js";
-import { resolvers } from "./data/resolvers.js";
+import schema from "./data/schema";
+import resolvers from "./data/resolvers";
 
 const PORT = 8080;
 
-const app = new express();
+const app = express();
 
-// middleware
+app.get("/", (_req, res) => {
+  res.send("GraphQL is amazing!");
+});
+
 app.use(
   "/graphql",
   graphqlHTTP({
@@ -17,6 +20,6 @@ app.use(
   })
 );
 
-app.listen(PORT, () => {
-  console.log(`Server started on http://localhost:${PORT}/graphql`);
-});
+app.listen(PORT, () =>
+  console.log(`Running server on localhost:${PORT}/graphql`)
+);
