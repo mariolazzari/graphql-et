@@ -157,3 +157,5 @@ pnpm add mongoose
 ```
 
 ## Mutations
+
+## Queries
